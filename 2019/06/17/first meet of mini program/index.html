@@ -246,7 +246,7 @@
 
     
         <meta property="article:published_time" content="Mon Jun 17 2019 21:55:05 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jun 17 2019 22:59:00 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jun 17 2019 23:22:12 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -269,7 +269,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/06/17/first meet of mini program/index.html",
     "headline": "初见微信小程序",
     "datePublished": "Mon Jun 17 2019 21:55:05 GMT+0800",
-    "dateModified": "Mon Jun 17 2019 22:59:00 GMT+0800",
+    "dateModified": "Mon Jun 17 2019 23:22:12 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "chameleon",
@@ -516,14 +516,18 @@
 </li>
 <li><p>安装依赖。在刚刚选择的目录打开 CMD 安装依赖。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd server &amp;&amp; npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd server &amp;&amp; npm install</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>点击界面右上角的【腾讯云】图标，在下拉的菜单栏中选择【上传测试代码】。</p>
 </li>
 <li><p>选择【模块上传】并勾选全部选项，然后勾选【部署后自动安装依赖】，点击【确定】开始上传代码。</p>
 </li>
-<li>上传代码完成之后，点击右上角的【详情】按钮，接着选择【腾讯云状态】即可看到腾讯云自动分配给你的开发环境域名。</li>
-<li>完整复制（包括 https://）开发环境 request 域名，然后在编辑器中打开 client/config.js 文件，将复制的域名填入 host 中并保存，保存之后编辑器会自动编译小程序，左边的模拟器窗口即可实时显示出客户端的 Demo</li>
-<li>在模拟器中点击【登录】，看到显示“登录成功”，即为开通完成。</li>
+<li><p>上传代码完成之后，点击右上角的【详情】按钮，接着选择【腾讯云状态】即可看到腾讯云自动分配给你的开发环境域名。</p>
+</li>
+<li><p>完整复制（包括 https://）开发环境 request 域名，然后在编辑器中打开 client/config.js 文件，将复制的域名填入 host 中并保存，保存之后编辑器会自动编译小程序，左边的模拟器窗口即可实时显示出客户端的 Demo</p>
+</li>
+<li><p>在模拟器中点击【登录】，看到显示“登录成功”，即为开通完成。</p>
+</li>
 </ol>
 <h2 id="小程序开发简析"><a href="#小程序开发简析" class="headerlink" title="小程序开发简析"></a>小程序开发简析</h2><h3 id="前端开发"><a href="#前端开发" class="headerlink" title="前端开发"></a>前端开发</h3><p>前端开发文件结构如下图所示：<br><img src="first meet of mini program/client.png" alt="前端开发文件结构"></p>
 <ol>
@@ -531,8 +535,10 @@
 </li>
 <li><p>在pages下建立并编写实现各个前端界面的View层和App Server层。</p>
 </li>
-<li>utils文件夹下放置要经常用的工具类API，供各个界面的App Server层，demo中已包含一个常用拟态框API（util.js）。</li>
-<li>其中Color-UI组件库和EC-Canvas图表插件只是我在项目中用到了，大家可以不用或选择更合适自己的。</li>
+<li><p>utils文件夹下放置要经常用的工具类API，供各个界面的App Server层，demo中已包含一个常用拟态框API（util.js）。</p>
+</li>
+<li><p>其中Color-UI组件库和EC-Canvas图表插件只是我在项目中用到了，大家可以不用或选择更合适自己的。</p>
+</li>
 </ol>
 <h3 id="后端开发"><a href="#后端开发" class="headerlink" title="后端开发"></a>后端开发</h3><p>wafer2快速开发解决方案后端配备的是koa2框架，下面主要介绍node.js版本结构：</p>
 <p><img src="first meet of mini program/server.png" alt="后端开发文件结构"></p>
@@ -541,10 +547,14 @@
 </li>
 <li><p>以app.js作为Server端入口，引入路由分发routes和响应处理中间件middlewares，启动程序并监听端口。</p>
 </li>
-<li>在routes下处理前端发送过来的网络请求，并分发到controllers下对应的API接口中进行处理。</li>
-<li>controllers下编写实现已设计好的API接口，API接口处理结果和要返回的数据经过响应处理中间件middlewares下的response.js进行错误捕获和处理后返回给Client端。</li>
-<li>controller中涉及到对数据库的操作，可以通过Knex.js数据库查询构造器进行处理（可选）。</li>
-<li>在tools下使用数据库初始化脚本initdb.js对数据库进行初始化，初始化完成后，读取cAuth.sql文件自动创建会话管理用户信息表。</li>
+<li><p>在routes下处理前端发送过来的网络请求，并分发到controllers下对应的API接口中进行处理。</p>
+</li>
+<li><p>controllers下编写实现已设计好的API接口，API接口处理结果和要返回的数据经过响应处理中间件middlewares下的response.js进行错误捕获和处理后返回给Client端。</p>
+</li>
+<li><p>controller中涉及到对数据库的操作，可以通过Knex.js数据库查询构造器进行处理（可选）。</p>
+</li>
+<li><p>在tools下使用数据库初始化脚本initdb.js对数据库进行初始化，初始化完成后，读取cAuth.sql文件自动创建会话管理用户信息表。</p>
+</li>
 </ol>
 <h2 id="小程序开发问题"><a href="#小程序开发问题" class="headerlink" title="小程序开发问题"></a>小程序开发问题</h2><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><ol>
 <li><p>小程序服务器必须使用HTTPS域名，开发阶段如需要使用自己的服务器（便于本地调试），可以在开发工具右上角【详情】的项目配置中勾选不校验合法域名。</p>
