@@ -246,7 +246,7 @@
 
     
         <meta property="article:published_time" content="Mon Jun 17 2019 21:55:05 GMT+0800">
-        <meta property="article:modified_time" content="Mon Jun 17 2019 22:22:52 GMT+0800">
+        <meta property="article:modified_time" content="Mon Jun 17 2019 22:45:42 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -269,7 +269,7 @@
     "mainEntityOfPage": "http://yoursite.com/2019/06/17/初见微信小程序/index.html",
     "headline": "初见微信小程序",
     "datePublished": "Mon Jun 17 2019 21:55:05 GMT+0800",
-    "dateModified": "Mon Jun 17 2019 22:22:52 GMT+0800",
+    "dateModified": "Mon Jun 17 2019 22:45:42 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "chameleon",
@@ -353,7 +353,7 @@
     </button>
 
     <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
-        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序解决方案的安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">小程序解决方案的安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小程序注册"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">小程序注册</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装开发工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装开发工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建demo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">创建demo</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序开发简析"><span class="post-toc-number">2.</span> <span class="post-toc-text">小程序开发简析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端开发"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">前端开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#后端开发"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">后端开发</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序开发常见问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">小程序开发常见问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端问题"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">前端问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#后端问题"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">后端问题</span></a></li></ol></li></ol>
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序解决方案的安装"><span class="post-toc-number">1.</span> <span class="post-toc-text">小程序解决方案的安装</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小程序注册"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">小程序注册</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装开发工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">安装开发工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建demo"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">创建demo</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序开发简析"><span class="post-toc-number">2.</span> <span class="post-toc-text">小程序开发简析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端开发"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">前端开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#后端开发"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">后端开发</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#小程序开发问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">小程序开发问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见问题"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">常见问题</span></a></li></ol></li></ol>
     </ul>
     
 
@@ -535,13 +535,24 @@
 <li>controller中涉及到对数据库的操作，可以通过Knex.js数据库查询构造器进行处理（可选）。</li>
 <li>在tools下使用数据库初始化脚本initdb.js对数据库进行初始化，初始化完成后，读取cAuth.sql<br>文件自动创建会话管理用户信息表。</li>
 </ol>
-<h2 id="小程序开发常见问题"><a href="#小程序开发常见问题" class="headerlink" title="小程序开发常见问题"></a>小程序开发常见问题</h2><h3 id="前端问题"><a href="#前端问题" class="headerlink" title="前端问题"></a>前端问题</h3><ol>
+<h2 id="小程序开发问题"><a href="#小程序开发问题" class="headerlink" title="小程序开发问题"></a>小程序开发问题</h2><h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><ol>
 <li><p>小程序服务器必须使用HTTPS域名，开发阶段如需要使用自己的服务器（便于本地调试），可以在<br>开发工具右上角【详情】的项目配置中勾选不校验合法域名。</p>
 </li>
-<li><p>腾讯云</p>
+<li><p>小程序若在一段时间内没有活动，默认配置的腾讯云开发环境会关闭，导致前端请求失败，可以点击<br>右上角的【腾讯云】中的恢复开发环境即可恢复正常。</p>
+</li>
+<li><p>后端修改代码后，上传测试代码，若重启服务出错，检查修改的代码是不是出现问题，若不是代码问<br>题，重启微信开发者工具。</p>
+</li>
+<li><p>前端发起post请求时需要加上method和header字段，代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">wx.request(&#123;</span><br><span class="line">  url: config.service.requestUrl + <span class="string">'api'</span>,</span><br><span class="line">  data: &#123;</span><br><span class="line">      <span class="comment">//参数</span></span><br><span class="line">  &#125;,</span><br><span class="line">  method: <span class="string">'POST'</span>,</span><br><span class="line">  header: &#123;</span><br><span class="line">    <span class="string">"content-type"</span>: <span class="string">"application/x-www-form-urlencoded"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  success: <span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//处理函数</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>后端接受get请求参数时，用如下形式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> openId = ctx.request.query.openId</span><br></pre></td></tr></table></figure>
+<p>接受post请求时使用如下方式：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> openId = ctx.request.body.openId</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>左上角【工具】中选择工具栏管理，可以选择更多功能。其中测试功能每天可以使用一次，每次随机<br>2-7个机型自动测试小程序性能，若小程序有问题，一天后测试超时，但最长10天返回测试结果（包括超时）</p>
 </li>
 </ol>
-<h3 id="后端问题"><a href="#后端问题" class="headerlink" title="后端问题"></a>后端问题</h3>
+
         
     
 
